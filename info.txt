@@ -1,0 +1,48 @@
+src/index.js
+
+Markdown
+
+
+Componentes de React : 
+
+1 - Son funciones
+
+  const componente = () => {}
+
+2 - Siempre van en mayusculas
+
+  const Componente = () => {}
+
+3 - Siempre tienen retorno
+
+  const Componente = () => {
+    return "Hola Mundo"
+  }
+
+
+
+
+
+
+
+class Componente extends React.Component {
+
+  render(){
+
+  }
+
+  componentDidMount(){}
+
+  componentDidUpdate(){}
+
+  componentWillUnmount(){}
+
+  componentWillMount(){}
+
+  componentWillUpdate(){}
+
+  componentWillReceiveProps(){}
+
+  shouldComponentUpdate(){}
+
+}
