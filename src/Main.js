@@ -1,6 +1,18 @@
+import {Container , Button} from "react-bootstrap"
+
+/* const Main = () => {
+  return (
+    <main className="container-fluid">Main</main>
+  )
+} */
+
+
 const Main = () => {
   return (
-    <main>Main</main>
+    <Container as="main" fluid>
+      Main
+      <Button>click</Button>
+    </Container>
   )
 }
 

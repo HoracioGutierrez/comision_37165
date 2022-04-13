@@ -9,6 +9,7 @@ import App from "./App"
 
 //import "./estilos.css"
 import "./estilos.scss"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
