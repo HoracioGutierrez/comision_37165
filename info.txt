@@ -21,6 +21,21 @@ Componentes de React :
 
 
 
+function Nav(){
+
+}
+
+
+<Nav id="nav-test" />   ===  Nav("nav-test")
+
+
+
+
+PATRON CONTAINER 
+
+
+
+
 
 
 
@@ -46,3 +61,67 @@ class Componente extends React.Component {
   shouldComponentUpdate(){}
 
 }
+
+
+
+function Nav(uno,dos,footer){
+
+}
+
+Nav(a,b,true)
+Nav(a,b,false)
+
+
+<Nav id="nav-test" />   ===  Nav("nav-test")
+
+
+
+var nombre = "horacio"
+
+`hola , soy ${nombre}`
+
+
+
+DESTRUCTURING : 
+
+const arr = [1,2,3]
+
+const [uno,dos,tres] = arr
+
+const uno = arr[0]
+const dos = arr[1]
+const tres = arr[2]
+
+
+
+
+
+
+const obj = {x:1,y:2,z:3}
+const {x:uno,y:dos,z:tres} = obj
+const {x:x,y:y,z:z} = obj
+const {x,y,z} = obj
+
+const x = obj.x
+const y = obj.y
+const z = obj.z
+
+
+obj["x"]
+obj[x]
+
+
+
+
+OBJECT PROPERTY SHORTHAND
+
+
+
+
+const nombre = "horacio"
+
+const persona = {
+  nombre : nombre
+}
+
+const persona = {nombre}

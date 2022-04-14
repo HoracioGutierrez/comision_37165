@@ -15,16 +15,13 @@ const App = () => {
   return (
     <>
       <Header/>
-      <Main/>
-      <Footer/>
+      <Main nombre="Pedro">
+        <p>Hola Mundo</p>
+        <p>Hola Mundo 2</p>
+      </Main>
+      <Footer />
     </>
   )
 }
 
 export default App
-
-
-
-/* export default app = () => {
-  return "Hola Mundo"
-} */
