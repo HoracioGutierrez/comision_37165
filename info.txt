@@ -125,3 +125,80 @@ const persona = {
 }
 
 const persona = {nombre}
+
+
+HOOK : funciones que extienden la funcionalidad del mismo componente
+
+1 - Se ejecutan adentro de un componente
+2 - No pueden estar en ningun flujo 
+
+
+
+
+
+
+
+
+valor inicial 0 
+incrementando en una unidad
+si valor actual es 8 entonces que no aumente
+
+
+
+
+import { useState } from "react"
+
+/* const btn = document.querySelector('button');
+btn.addEventListener('click', ()=>{}) */
+
+
+const Presentacional = () => {
+
+  //const resultado = useState(0)
+  const [contador, setContador] = useState(0)
+  const [dark, setDark] = useState(false)
+
+  //console.log(resultado)
+  //const contador = resultado[0]
+  //const setContador = resultado[1]
+  //Estado : Es una variable interna de un componente que guarda un valor a traves del tiempo
+  //const contador = 0
+
+  const aumentarContador = () => {
+    //contador = contador + 1
+    //contador++
+    //contador+=1
+    //const p = document.querySelector('p')
+    //p.innerText = contador
+    setContador(contador + 1)
+  }
+
+  const toggleDark = () => {
+    //dark = true
+    setDark()
+  }
+
+  return (
+    <div>
+      <p>Contador Actual : {contador}</p>
+      <p>Modo dark : {}</p>
+      <button onClick={aumentarContador}>aumentar</button>
+      <button onClick={toggleDark}>toggle dark</button>
+    </div>
+  )
+}
+export default Presentacional
+
+
+
+
+CICLO DE VIDA : 
+
+mount
+
+update
+  - El estado cambia
+  - Su padre se actualizo 
+  - Si los props cambian
+
+unmount

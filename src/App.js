@@ -15,10 +15,7 @@ const App = () => {
   return (
     <>
       <Header/>
-      <Main nombre="Pedro">
-        <p>Hola Mundo</p>
-        <p>Hola Mundo 2</p>
-      </Main>
+      <Main nombre="Pedro"/>
       <Footer />
     </>
   )

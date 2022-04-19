@@ -5,7 +5,7 @@ const Container = () => {
   const usuarios = ["Juan","Pedro","Maria","Ana"]
 
   return (
-    <Presentacional usuarios={usuarios}/>
+    <Presentacional usuarios={usuarios} />
   )
 }
 

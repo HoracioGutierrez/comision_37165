@@ -1,16 +1,10 @@
 import Container from "./Container"
 
-const Main = ({ children, nombre }) => {
-
-  //console.log(props)
-  //const {children,nombre} = props
-  //const {children:children} = props
-  //const children = props.children
+const Main = ({ nombre }) => {
 
   return (
     <main>
-      Main, bienvenido {nombre}
-      {children}
+      <h1>Hola, bienvenido {nombre}</h1>
       <span className="material-icons">
         shopping_cart
       </span>
