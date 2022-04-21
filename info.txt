@@ -202,3 +202,67 @@ update
   - Si los props cambian
 
 unmount
+
+
+
+/*
+  Este efecto se ejecuta siempre despues de cada
+  
+  useEffect(()=>{
+    console.log("Hubo un efecto")
+  }) */
+
+
+  
+  /* 
+  Este efecto se ejecuta despues del primer render y nunca mas
+
+  useEffect(()=>{
+    console.log("Hubo un efecto")
+  },[])  */
+
+  
+  
+  /*
+  Este efecto se ejecuta despues del primer render y cuando cambie el valor la variable confirmado
+  
+  useEffect(()=>{
+    console.log("Hubo un efecto")
+  },[confirmado])  */
+
+
+  const arr = [1,2,3]
+
+  arr.forEach((elemento,indice)=>{
+    
+  })
+
+  const r = arr.map((elemento,indice)=>{
+    if(){
+
+    }
+    return ?
+  })
+
+  [2,3,4]
+
+
+  Promise 
+
+
+  const promesa = new Promise((res)=>{
+    res(?)
+  })
+
+  promesa
+    .then()
+
+  promesa
+    .catch()
+
+    .then((contenido)=>{
+      console.log("Salio todo Bien")
+    })
+    .catch((error)=>{
+      console.log("Salio todo Mal")
+    })

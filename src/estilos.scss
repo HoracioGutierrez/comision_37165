@@ -54,3 +54,14 @@ padre hijo {
   justify-content: space-between;
   font-size: 0.8rem;
 }
+
+.modal {
+  position: fixed;
+  top : 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}

@@ -1,8 +1,4 @@
 const Nav = (props) => {
-  //console.table(props.link)
-  //console.log(props.id)
-  //console.log(props.nombre)
-  //console.log(props.footer)
   if(props.footer){
     return (
       <nav className="nav">
