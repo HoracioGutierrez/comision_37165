@@ -1,0 +1,26 @@
+[
+  {
+    "id" : 1,
+    "nombre" : "Camisa",
+    "precio" : 50,
+    "categorias" : ["camisas","remeras"],
+    "imagen" : "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
+    "description" : "Camisa de algodon"
+  },
+  {
+    "id" : 2,
+    "nombre" : "Pantalon",
+    "precio" : 100,
+    "categorias" : ["pantalones","jeans"],
+    "imagen" : "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
+    "description" : "Pantalon de algodon"
+  },
+  {
+    "id" : 3,
+    "nombre" : "Zapatos",
+    "precio" : 150,
+    "categorias" : ["zapatos","sandalias"],
+    "imagen" : "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
+    "description" : "Zapatos de algodon"
+  }
+]

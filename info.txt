@@ -266,3 +266,83 @@ unmount
     .catch((error)=>{
       console.log("Salio todo Mal")
     })
+
+
+
+
+HTTP
+
+XHR - FETCH 
+
+
+CLIENTE / REQUEST
+
+URL/IP : la direccion del servidor/recurso
+METODO/VERBO : get - post - put - patch - delete - head - options
+BODY : la data que queres enviar (si aplica)
+HEADERS : informacion de configuracion / metadata
+VERSION : 1.1
+
+
+
+
+SERVIDOR / RESPONSE
+
+CODIGO : 1xx(Informativos) - 2xx(Respuestas Correctas) - 3xx(Redirecciones) - 4xx(Error del cliente)  - 5xx(Errores del servidor)
+MENSAJE : Mensaje que acompaña al codigo
+BODY : la data que queres enviar (si aplica)
+HEADERS : informacion de configuracion / metadata
+VERSION : 1.1
+
+
+fetch("http://google.com")
+
+
+API WEB
+API REST : 
+
+  http://mercadopago.com/api/users - GET
+  http://mercadopago.com/api/ventas - POST
+
+
+
+
+//Pido Usuarios -> Pido Posteos -> Pido Comentarios
+//1) Arrancas el pedido
+const pedido = fetch("https://fakestoreapi.com/products")
+/* 
+axios.get("https://fakestoreapi.com/products")
+.then((res)=>{
+  console.log(res)
+}) */
+
+//Callback Hell
+pedido
+  .then((respuestaPedido)=>{
+
+    //Transformar la respuesta de un fetch a algun formato siempre da promise
+    const productos = respuestaPedido.json()
+    //console.log(productos)
+    return productos
+
+  })
+  .then((respuestaConFormato)=>{
+    console.log(respuestaConFormato)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+
+//trigger
+/* document.addEventListener("click",()=>{
+  console.log("click del document")
+}) */
+
+//Timers
+//no-bloqueante
+/* setTimeout(()=>{
+  console.log("Estoy Primero")
+},5000) */
+
+//bloqueante
+//console.log("Estoy segundo")

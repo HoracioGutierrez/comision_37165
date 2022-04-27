@@ -29,17 +29,17 @@ const Container = () => {
   useEffect(() => {
 
     //console.log("Pido productos...")
-    const promesa = new Promise((res,rej)=>{
+    const promesa = new Promise((res, rej) => {
       res(productosDeBaseDeDatos)
       //rej("Hubo un error")
     })
 
-    .then((contenido)=>{
-      console.log("Salio todo Bien")
-    })
-    .catch((error)=>{
-      console.log("Salio todo Mal")
-    })
+      .then((contenido) => {
+        console.log("Salio todo Bien")
+      })
+      .catch((error) => {
+        console.log("Salio todo Mal")
+      })
 
     /* setTimeout(() => {
       
@@ -57,12 +57,13 @@ const Container = () => {
   return (
     <>
       <Contador stock={10} init={0} onAdd={onAdd} />
-      <ul>
+      {/* <ItemList productos={productos}/> */}
+      {/* <ul>
         {productos.map((producto)=>{
           //console.log(producto,indice)
           return <li key={producto.id} >{producto.nombre}</li>
         })}
-      </ul>
+      </ul> */}
     </>
   )
 }

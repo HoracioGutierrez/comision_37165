@@ -1,11 +1,13 @@
-import Container from "./Container"
+import ItemDetailContainer from "./ItemDetailContainer"
+import ItemListContainer from "./ItemListContainer"
 
 const Main = ({ nombre }) => {
 
   return (
     <main>
       <h1>Hola, bienvenido {nombre}</h1>
-      <Container />
+      <ItemListContainer />
+      <ItemDetailContainer/>
     </main>
   )
 }
