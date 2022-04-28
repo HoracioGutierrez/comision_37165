@@ -1,13 +1,18 @@
+import { Routes , Route } from "react-router-dom"
 import ItemDetailContainer from "./ItemDetailContainer"
 import ItemListContainer from "./ItemListContainer"
+import Carrito from "./Carrito"
 
-const Main = ({ nombre }) => {
 
+const Main = () => {
   return (
     <main>
-      <h1>Hola, bienvenido {nombre}</h1>
-      <ItemListContainer />
-      <ItemDetailContainer/>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />}/>
+        <Route path="/productos/:nombreCategoria" element={<ItemListContainer />}/>
+        <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/carrito" element={<Carrito/>}/>
+      </Routes>
     </main>
   )
 }

@@ -346,3 +346,8 @@ pedido
 
 //bloqueante
 //console.log("Estoy segundo")
+
+
+SPA : SINGLE PAGE APPLICATION
+
+SSR : Server Side Rendering

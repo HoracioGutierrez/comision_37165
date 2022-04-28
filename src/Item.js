@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom"
+
 const Item = ({producto}) => {
+  
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate(`/producto/${producto.id}`)
+  }
+
   return (
     <article className="card">
       <h3>{producto.nombre}</h3>
@@ -7,7 +16,7 @@ const Item = ({producto}) => {
       <p>Categorias : {producto.categorias.map(categoria=>{
         return <span>{categoria}</span>
       })} </p>
-      <button>Detalles</button>
+      <button onClick={handleClick}>ver mas</button>
     </article>
   )
 }
