@@ -351,3 +351,26 @@ pedido
 SPA : SINGLE PAGE APPLICATION
 
 SSR : Server Side Rendering
+
+
+
+/src
+  /back
+  /front
+    |_ui
+      |_layout
+        |_Header.js
+        |_Footer.js
+        |_Main.js
+        |_App.js
+      |_paginas
+        |_Home.js
+        |_Productos.js
+        |_Categorias.js
+        |_Carrito.js
+      |_utils
+        |_CartWidget.js
+        |_NavBar.js
+      |_Containers
+        
+    |_api

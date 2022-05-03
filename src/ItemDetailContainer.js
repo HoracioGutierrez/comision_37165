@@ -1,19 +1,36 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import productosIniciales from "./productos.json"
 
 const ItemDetailContainer = () => {
 
   const [cargando,setCargando] = useState(true)
   const [producto,setProducto] = useState({})
+  const {id} = useParams()
 
   useEffect(()=>{
+    //console.log("Pido el producto con id: ",id)
+    //console.log("Tengo los productos iniciales: ",productosIniciales)
+    const resultado = productosIniciales.filter((producto)=>{
+      return producto.id == id
+    })[0]
+    setProducto(resultado)
+    setCargando(false)
     //aca hago el pedido (la promesa con el timeout de 2 seg)
   })
 
-
-  return (
-    <p>Cargando...</p>
-  )
+  if(cargando){
+    return (
+      <p>Cargando...</p>
+    )
+  }else{
+    return (
+      <>
+        <ItemDetail/>
+      </>
+    )
+  }
 }
 
 export default ItemDetailContainer

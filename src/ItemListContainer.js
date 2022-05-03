@@ -9,8 +9,9 @@ const ItemListContainer = () => {
 
   const [cargando,setCargando] = useState(true)
   const [productos,setProductos] = useState([])
-  const {nombreCategoria} = useParams()
+  const {nombreCategoria,test} = useParams()
 
+  console.log({nombreCategoria,test})
   //console.log(nombreCategoria)
   //productos.filter()
   useEffect(()=>{
