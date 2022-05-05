@@ -11,16 +11,16 @@ const ItemListContainer = () => {
   const [productos,setProductos] = useState([])
   const {nombreCategoria,test} = useParams()
 
-  console.log({nombreCategoria,test})
+  //console.log({nombreCategoria,test})
   //console.log(nombreCategoria)
   //productos.filter()
   useEffect(()=>{
 
     if(nombreCategoria==undefined){
-      console.log("Pido todos los productos")
+      //console.log("Pido todos los productos")
     }
       else{
-        console.log("Pido los productos de la categoria: ",nombreCategoria)
+        //console.log("Pido los productos de la categoria: ",nombreCategoria)
       }
     
     toast.info("Cargando productos...")

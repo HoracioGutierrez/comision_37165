@@ -1,9 +1,11 @@
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import Hijo from './Hijo';
+import { contexto } from './miContexto';
 
 const ItemDetail = () => {
 
   const [nombre, setNombre] = useState('');
+  const {agregarProducto} = useContext(contexto)
 
   const handleClickDefault = (e) => {
     e.preventDefault()
