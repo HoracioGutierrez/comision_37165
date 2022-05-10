@@ -11,9 +11,7 @@ const ItemListContainer = () => {
   const [productos,setProductos] = useState([])
   const {nombreCategoria,test} = useParams()
 
-  //console.log({nombreCategoria,test})
-  //console.log(nombreCategoria)
-  //productos.filter()
+  
   useEffect(()=>{
 
     if(nombreCategoria==undefined){
@@ -33,7 +31,6 @@ const ItemListContainer = () => {
 
     pedido
     .then(()=>{
-      //console.log("Termino el pedido bien!")
       setCargando(false)
       setProductos(productosIniciales)
       toast.dismiss()
@@ -42,15 +39,11 @@ const ItemListContainer = () => {
 
   },[nombreCategoria])
 
-  if(cargando){
-    return(
-      <BeatLoader/>
-    )
-  }else{
-    return (
-      <ItemList productos={productos}/>
-    )
-  }
+  return (
+    <>
+      {cargando ? <BeatLoader /> : <ItemList productos={productos} />}
+    </>
+  )
 }
 
 export default ItemListContainer

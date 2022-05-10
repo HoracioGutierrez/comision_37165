@@ -51,7 +51,7 @@ const ItemDetail = () => {
       </form>
 
 
-      {/* <h1>Detalle del producto</h1>
+      <h1>Detalle del producto</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Pellentesque euismod, urna eu tincidunt consectetur,
@@ -60,7 +60,7 @@ const ItemDetail = () => {
       </p>
       <img src="https://via.placeholder.com/300" alt=""/>
       <p>Precio : $100</p>
-       */}
+      
        <button>terminar mi compra</button>
     </div>
   )

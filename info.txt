@@ -374,3 +374,62 @@ SSR : Server Side Rendering
       |_Containers
         
     |_api
+
+
+
+//operador ternario
+//los otros : && ||
+/* 
+
+
+function foo(){
+  //return ?
+}
+
+const resultado = foo()
+
+
+var resultado = if(condicion) {
+  console.log(a)
+} else {
+  console.log(b)
+}
+
+const resultado = true ? console.log("test") : b
+
+const resultado = condicion && "test"
+
+
+
+ */
+
+
+ {/* {change ? <p className="rojo">esto es un texto</p> : <p className="negro">esto es un texto</p>} */}
+      {/* <p className={change?"rojo":"negro"}>Esto es un texto</p> */}
+      {/* <p className={change ? "container row col-xs-6 rojo" : "container row col-xs-6"}>Esto es un texto</p> */}
+      {/* <p className={`container row col-xs-6 ${change && "rojo"}`}>Esto es un texto</p> */}
+      {/* <p className={`container row col-xs-6 ${change ? "rojo" : ""}`}>Esto es un texto</p> */}
+
+
+
+RENDERS : 
+
+- Cambia un estado
+- Cambia el contexto
+- Cambia un prop
+- Cambia el padre 
+
+
+
+
+OPERADOR REST/SPREAD (...)
+
+
+function foo(...argumentos){
+  console.log(argumentos.length) //[1,2,3]
+}
+
+foo(1,2,3)
+foo(1,2)
+foo(1)
+
