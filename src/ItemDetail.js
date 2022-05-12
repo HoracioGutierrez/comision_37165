@@ -1,11 +1,11 @@
-import {useContext, useState} from 'react'
+import { useContext, useState } from 'react'
 import Hijo from './Hijo';
 import { contexto } from './miContexto';
 
 const ItemDetail = () => {
 
   const [nombre, setNombre] = useState('');
-  const {agregarProducto} = useContext(contexto)
+  const { agregarProducto } = useContext(contexto)
 
   const handleClickDefault = (e) => {
     e.preventDefault()
@@ -21,7 +21,7 @@ const ItemDetail = () => {
 
   const handleChange = (e) => {
     //console.log(e.target.name)
-    if(e.target.value !== ""){
+    if (e.target.value !== "") {
       setNombre(e.target.value)
     }
   }
@@ -40,6 +40,15 @@ const ItemDetail = () => {
     console.log(nombre)
   }
 
+  const handleAddCarrito = () => {
+    agregarProducto({
+      id: 1,
+      nombre : "Producto 1",
+      precio : 100,
+      cantidad : 1
+    })
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -47,7 +56,7 @@ const ItemDetail = () => {
         <a href="http://google.com" onClick={handleClickDefault}>ir a Google!</a>
         <input type="text" name="username" onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
         <button onClick={handleClick}>click</button>
-        <Hijo onClick={handleClick}/>
+        <Hijo onClick={handleClick} />
       </form>
 
 
@@ -58,10 +67,10 @@ const ItemDetail = () => {
         nisi nisl tincidunt nisi, eget porttitor nisl nisi eu
         urna.
       </p>
-      <img src="https://via.placeholder.com/300" alt=""/>
+      <img src="https://via.placeholder.com/300" alt="" />
       <p>Precio : $100</p>
-      
-       <button>terminar mi compra</button>
+
+      <button onClick={handleAddCarrito}>terminar mi compra</button>
     </div>
   )
 }

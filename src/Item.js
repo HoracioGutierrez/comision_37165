@@ -10,12 +10,12 @@ const Item = ({producto}) => {
 
   return (
     <article className="card">
-      <h3>{producto.nombre}</h3>
+      <h3>{producto.titulo}</h3>
       <img src="https://via.placeholder.com/300x300" alt="card"/>
       <p>Precio : ${producto.precio}</p>
-      <p>Categorias : {producto.categorias.map(categoria=>{
+      <p>Categorias : {producto.categoria}{/* producto.categorias.map(categoria=>{
         return <span>{categoria}</span>
-      })} </p>
+      }) */} </p>
       <button onClick={handleClick}>ver mas</button>
     </article>
   )

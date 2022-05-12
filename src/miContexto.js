@@ -1,4 +1,5 @@
 import { createContext, useState } from "react"
+import { toast } from "react-toastify"
 
 export const contexto = createContext()
 const { Provider } = contexto
@@ -7,8 +8,9 @@ const { Provider } = contexto
 const MiCustomProvider = ({children}) => {
 
   const [carrito,setCarrito] = useState([])
-  const [cantidad_total,setCantidad_total] = useState(0)
-  const [precio_total,setPrecio_total] = useState(0)
+  const [cantidadTotal,setCantidadTotal] = useState(0)
+  const [precioTotal,setPrecioTotal] = useState(0)
+  
 
  /* 
  
@@ -22,13 +24,14 @@ const MiCustomProvider = ({children}) => {
 
  */
 
-  const agregarProducto = (producto,cantidad) => {
-   /*  if(estaEnCarrito(producto)){
-
+  const agregarProducto = (producto) => {
+    if(estaEnCarrito(producto.id)){
+      toast.info("El producto ya está en el carrito!")
     }else{
-
-      setCantidad_total(cantidad_total + cantidad)
-    } */
+      setCantidadTotal(cantidadTotal + producto.cantidad)
+      setPrecioTotal(precioTotal + producto.precio)
+      setCarrito([...carrito,producto])
+    }
   }
 
   const eliminarProducto = (id) => {
@@ -39,13 +42,15 @@ const MiCustomProvider = ({children}) => {
     setCarrito([])
   }
 
-  const estaEnCarrito = (producto) => {
+  const estaEnCarrito = (id) => {
     //return true o false
+    //return carrito.filter(productoCarrito=>productoCarrito.id == producto.id).length > 0 ? true : false
+    return carrito.find(productoCarrito=>productoCarrito.id == id)
   }
 
   const valorDelContexto = {
-    cantidad_total ,
-    precio_total ,
+    cantidadTotal ,
+    precioTotal ,
     carrito ,
     agregarProducto ,
     eliminarProducto , 

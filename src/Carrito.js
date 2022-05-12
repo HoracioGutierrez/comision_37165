@@ -1,7 +1,7 @@
 import { useCallback, useContext, useState } from "react"
 import CarritoLista from "./CarritoLista"
 import { contexto } from "./miContexto"
-
+import { db } from "./firebase"
 
 /**
  * 

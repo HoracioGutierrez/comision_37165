@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import productosIniciales from "./productos.json"
+import { db } from "./firebase"
 
 const ItemDetailContainer = () => {
 
