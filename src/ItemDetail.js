@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import Hijo from './Hijo';
 import { contexto } from './miContexto';
 
-const ItemDetail = () => {
+const ItemDetail = ({producto}) => {
 
   const [nombre, setNombre] = useState('');
   const { agregarProducto } = useContext(contexto)
@@ -60,15 +60,12 @@ const ItemDetail = () => {
       </form>
 
 
-      <h1>Detalle del producto</h1>
+      <h1>{producto.titulo}</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Pellentesque euismod, urna eu tincidunt consectetur,
-        nisi nisl tincidunt nisi, eget porttitor nisl nisi eu
-        urna.
+        {producto.descripcion}
       </p>
-      <img src="https://via.placeholder.com/300" alt="" />
-      <p>Precio : $100</p>
+      <img src={producto.imagen} alt="" width={300}/>
+      <p>Precio : ${producto.precio}</p>
 
       <button onClick={handleAddCarrito}>terminar mi compra</button>
     </div>
